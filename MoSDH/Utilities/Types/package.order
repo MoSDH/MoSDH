@@ -1,0 +1,11 @@
+ControlTypes
+ControlTypesSolar
+ControlTypesHeatPump
+Seasons
+OperationModes
+StorageOperationModes
+SolarOperationModes
+ControlTypesHX
+ValveOperationModes
+IrradiationDataDirection
+ValveOpeningModes

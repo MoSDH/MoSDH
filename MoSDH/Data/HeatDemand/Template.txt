@@ -1,0 +1,9 @@
+// for a further description on the file format see the documentation for Modelica.Blocks.Tables.CombiTable1D 
+// Table with 'nPairs' values for heat load data
+// First column is for time data: unit of the data can be changed in the load component by parameter timeUnitData (default =1h)
+// Second column is for power data: unit can be change in the load component by parameter powerUnitData (default=1W)
+#1	
+double Load(nPairs,2)	
+0	1000
+....	....
+8783	1000

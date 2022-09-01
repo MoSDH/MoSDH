@@ -1,0 +1,24 @@
+// for a further description on the file format see the documentation for Modelica.Blocks.Tables.CombiTable1D 
+#1
+double Tambient(8760,2)
+1	-2.6
+time [h]	temperature [°C]
+8760	-2.8
+
+double beamIrradiationHorizontal(8760,2)
+1	0
+time [h]	beam irradiation in zenit direction [W/m²]
+....	....
+8760	0
+
+double diffuseIrradiation(8760,2)
+1	0
+time [h]	diffuse irradiation on a horizontal plane [W/m²]
+...	...
+8760	0
+
+double WindSpeed(8760,2)
+1	0
+time [h]	wind speed [m/s]
+...	...
+8760	0
