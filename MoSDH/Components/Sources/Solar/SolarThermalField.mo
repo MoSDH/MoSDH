@@ -239,7 +239,7 @@ model SolarThermalField "Solar thermal collector field"
 	initial equation
 		pre(pumpON) = false;
 	algorithm
-		when on and solarModule[nSeries].pipes.T > Tref + 0.5 or mode == MoSDH.Utilities.Types.ControlTypesSolar.RefTempCooling then
+		when on and solarModule[nSeries].pipes.T > Tref + 2 or mode == MoSDH.Utilities.Types.ControlTypesSolar.RefTempCooling then
 		  pumpON := true;
 		elsewhen (not on or solarModule[nSeries].pipes.T < Tref - 1.5) and not mode == MoSDH.Utilities.Types.ControlTypesSolar.RefTempCooling then
 		  pumpON := false;
