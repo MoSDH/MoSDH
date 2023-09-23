@@ -26,8 +26,8 @@ model DHpiping "Model of two pipes in a circulare region"
 		segmentLength=segmentLengths) annotation(Placement(transformation(extent={{-50,10},{-30,30}})));
 	MoSDH.Components.Utilities.FluidHeatFlow.HeatTransmissionResistance heatTransmission(
 		medium=medium,
-		Lchar(displayUnit="m")=BHElength,
-		diameter(displayUnit="m")=BHEdata.dPipe1-BHEdata.tPipe1) annotation(Placement(transformation(extent={{-85,5},{-65,25}})));
+		Lchar=sum(segmentLengths),
+		diameter=BHEdata.dPipe1-BHEdata.tPipe1) annotation(Placement(transformation(extent={{-85,5},{-65,25}})));
 	equation
 		heatTransmission.volFlow=supplyPort.m_flow/(medium.rho*nParallel);
 		connect(BHEsegments[1].topSupplyPort,supplyPort) annotation(Line(
