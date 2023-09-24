@@ -19,7 +19,7 @@ connector Weather "Weather data connector"
 			lineColor={0,176,80},
 			fillColor={0,176,80},
 			fillPattern=FillPattern.Solid,
-			lineThickness=1,
+			lineThickness=0.1,
 			extent={{-98,98},{98,-98}})}),
 		Diagram(graphics={
 			Ellipse(

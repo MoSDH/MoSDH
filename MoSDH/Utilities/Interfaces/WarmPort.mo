@@ -7,7 +7,7 @@ connector WarmPort "Port used for warm fluid"
    lineColor={177,0,177},
    fillColor={177,0,177},
    fillPattern=FillPattern.Solid,
-   lineThickness=1,
+   lineThickness=0.1,
    extent={{-98,98},{98,-98}})}),
   Diagram(graphics={
    Ellipse(

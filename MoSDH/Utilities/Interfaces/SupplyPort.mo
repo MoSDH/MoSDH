@@ -7,7 +7,7 @@ connector SupplyPort "Port used for hot fluid"
    lineColor={255,0,0},
    fillColor={255,0,0},
    fillPattern=FillPattern.Solid,
-   lineThickness=1,
+   lineThickness=0.1,
    extent={{-98,98},{98,-98}})}),
   Diagram(graphics={
    Ellipse(

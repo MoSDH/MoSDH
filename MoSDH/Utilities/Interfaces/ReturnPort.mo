@@ -7,7 +7,7 @@ connector ReturnPort "Port used for cool fluid"
    lineColor={0,0,255},
    fillColor={0,0,255},
    fillPattern=FillPattern.Solid,
-   lineThickness=1,
+   lineThickness=0.1,
    extent={{-98,98},{98,-98}})}),
   Diagram(graphics={
    Ellipse(
