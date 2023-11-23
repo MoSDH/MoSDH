@@ -82,7 +82,7 @@ model HeatDemand "Heat demand defined by heating curve"
 		Pload=if loadOnFile then max(0,loadTable.y[1])*powerUnitData else PloadRef;
 		der(Qload)=Pload;
 		if lowSupplyTemperature then
-		heatExtraction.Q_flow=-max(0,min(Pload,Tsupply-TreturnGrid)*pipe.V_flowNominal*medium.cp*medium.rho);
+		heatExtraction.Q_flow=-max(0,min(Pload,(Tsupply-TreturnGrid)*pipe.V_flowNominal*medium.cp*medium.rho));
 		volFlowSet=pipe.V_flowNominal;
 		else
 		heatExtraction.Q_flow=-Pload;
