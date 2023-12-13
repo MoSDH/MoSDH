@@ -1,7 +1,7 @@
 ﻿within MoSDH.Components.Weather;
 model WeatherData "Weather data model"
 	import Seasons = MoSDH.Utilities.Types.Seasons;
-	MoSDH.Utilities.Interfaces.Weather weatherPort "Weather data connector" annotation(Placement(
+	MoSDH.Utilities.Interfaces.WeatherSignal weatherPort "Weather data connector" annotation(Placement(
 		transformation(extent={{-10,190},{10,210}}),
 		iconTransformation(extent={{-10,190},{10,210}})));
 	Modelica.Units.SI.Angle declinationAngle "Declination of the earth";
