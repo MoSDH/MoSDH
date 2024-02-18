@@ -3,6 +3,7 @@ FluidPort
 WarmPort
 ReturnPort
 Weather
+WeatherSignal
 FluidInterface
 ExampleFluidInterface
 ExampleFluidInterface2
