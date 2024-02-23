@@ -36,7 +36,7 @@ model BTES "BTES model"
   max=1000)=100 "Number of borehole heat exchangers (BHE)" annotation(Dialog(
   group="Dimensions",
   tab="Design"));
- inner parameter Modelica.Units.SI.Length BHElength(
+ parameter Modelica.Units.SI.Length BHElength(
   displayUnit="m",
   min=20,
   max=2000)=100 "Length of BHEs" annotation(Dialog(
@@ -196,6 +196,7 @@ protected
   replaceable BHEmodel BHEarray[nBHEelementsR] constrainedby
     MoSDH.Components.Sources.Geothermal.BaseClasses.partialBHE(
    each nSegments=nBHEelementsZ,
+   each BHElength=BHElength,
    each BHEdata=BHEdata,
    each groutData=groutData,
    each groutDataUpper=groutDataUpper,

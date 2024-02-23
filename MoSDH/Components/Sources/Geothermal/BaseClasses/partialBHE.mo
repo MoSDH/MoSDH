@@ -26,21 +26,19 @@ partial model partialBHE "base class for borehole heat exchangers"
   choicesAllMatching=true,
   Dialog(
    group="Borehole Heat Exchangers",
-   tab="Design",
-   enable=BHEmodeIsUsed));
+   tab="Design"));
  replaceable parameter MoSDH.Parameters.Grouts.Grout15 groutDataUpper constrainedby
     MoSDH.Parameters.Grouts.GroutPartial                                                                                 "Grout dataset" annotation (
   choicesAllMatching=true,
   Dialog(
    group="Borehole Heat Exchangers",
-   tab="Design",
-   enable=(useUpperGroutSection and BHEmodeIsUsed)));
+   tab="Design"));
  replaceable parameter Modelica.Thermal.FluidHeatFlow.Media.Water medium constrainedby
     Modelica.Thermal.FluidHeatFlow.Media.Medium                                                                                    annotation(choicesAllMatching=true);
- parameter Modelica.Units.SI.Temperature TinitialGrout[nSegments]=283.15 "initial BHE temperature";
+ parameter Modelica.Units.SI.Temperature TinitialGrout[nSegments]=fill(283.15,nSegments) "initial BHE temperature";
  parameter Modelica.Units.SI.Temperature TinitialSupply[nSegments]=TinitialGrout "Supply initial fluid temperature";
  parameter Modelica.Units.SI.Temperature TinitialReturn[nSegments]=TinitialGrout "Return initial fluid temperature";
- outer parameter Modelica.Units.SI.Length BHElength "Length of BHEs" annotation(Dialog(
+ parameter Modelica.Units.SI.Length BHElength=1 "Length of BHEs" annotation(Dialog(
   group="Dimensions",
   tab="Design"));
  Modelica.Units.SI.Temperature Tsupply=supplyPort.h/medium.cp "BHE supply temperature";

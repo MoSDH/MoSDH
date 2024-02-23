@@ -13,8 +13,7 @@ partial model AdaptedFriction "Simple friction model from MSL.Thermal.FluidHeatF
  Modelica.Units.SI.VolumeFlowRate volumeFlow;
  Modelica.Units.SI.Power Q_friction;
 protected
-  parameter Modelica.Units.SI.Pressure dpNomMin=dpLaminar/V_flowLaminar*
-              V_flowNominal;
+  parameter Modelica.Units.SI.Pressure dpNomMin=dpLaminar/V_flowLaminar*V_flowNominal;
   parameter Real k(
    final unit="Pa.s2/m6",
    fixed=false);

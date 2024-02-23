@@ -15,12 +15,10 @@ model Pump "Pump model"
 		min=0.1,
 		max=1)=0.6 "Pump effciency" annotation(Dialog(
 		group="Efficiency",
-		tab="Design",
-		enable=constantEfficiency));
+		tab="Design"));
 	parameter Real pumpEfficiency[:,:]={{0.1, 0.6}, {0.5, 0.6}, {1, 0.6}} "Normalized pump efficiency data" annotation(Dialog(
 		group="Efficiency",
-		tab="Design",
-		enable=not constantEfficiency));
+		tab="Design"));
 	Modelica.Units.SI.VolumeFlowRate volFlowRef=0 "Reference volume flow rate" annotation(Dialog(
 		group="General",
 		tab="Control"));
