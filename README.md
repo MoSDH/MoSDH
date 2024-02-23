@@ -5,7 +5,7 @@
 - Seasonal and short-term storage: pit storage, borehole storage and tank storage models
 - System modelling focus: component models include all required sub-components (pumps, sensors, ...) to make the construction of robust system models more simple.
 - Uses **Modelica Standard Library version 4.0.0**
-- Based on Modelica.Thermal.FluidHeatFlow and Modelica.Thermal.HeatTransfer
+- Based on Modelica.Thermal.FluidHeatFlow and Modelica.Thermal.HeatTransfer (**see MoSDH.Utilities.Interfaces.ExampleFluidInterface for an experimental interface to the Modelica.Fluid-Library**)
 - Tested succesfully in OpenModelica v1.20, SimulationX 4.3 and Dymola 2021x
 
 
