@@ -166,7 +166,7 @@ model HeatPump "Compression heat pump"
 	parameter Modelica.Units.SI.Temperature TminLoad(displayUnit="degC")=333.15 "Minimum load supply temperature" annotation(Dialog(
 		group="Operational range",
 		tab="Performance"));
-	parameter Modelica.Units.SI.Temperature MiminumShift(displayUnit="degC")=20 "Minimum shift from source to load" annotation(Dialog(
+	parameter Modelica.Units.SI.Temperature MiminumShift(displayUnit="K",min=5,max=TmaxLoad-TminSource)=20 "Minimum shift from source to load" annotation(Dialog(
 		group="Operational range",
 		tab="Performance"));
 	parameter Boolean enableReturnFlowMixing=true "=true, to lower source supply temperature by mixing with source return flow" annotation(Dialog(
